@@ -51,14 +51,14 @@ namespace WindowsFormsApp1
         private void button4_Click(object sender, EventArgs e)
         {
             LastExpression = Expression;
-            Expression = $"sqrt({Expression}";
+            Expression = $"sqrt({Expression})";
             ExpressionChanged?.Invoke(this, EventArgs.Empty);
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
             LastExpression = Expression;
-            Expression += @"\";
+            Expression += @"/";
             ExpressionChanged?.Invoke(this, EventArgs.Empty);
         }
         private void ModifyExpression(string symbol)
