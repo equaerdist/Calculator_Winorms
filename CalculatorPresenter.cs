@@ -33,11 +33,6 @@ namespace WindowsFormsApp1
             _model.ErrorMessage = string.Empty;
             _model.CurrentColor = Color.FromArgb(87, 40, 253);
             _model.Font = new Font("Segoe UI", 36F, FontStyle.Bold);
-            if (_model.Expression != null && _model.Expression.Contains("%") && regex.IsMatch(_model.Expression)) 
-            {
-                _model.Expression = "Нельзя делить нацело число с плавающей точкой";
-               applyErrorColor();
-            }
             if(_model.Expression != null && nullRegex.IsMatch(_model.Expression))
             {
                 _model.Expression = "Нельзя делить на 0";
