@@ -22,6 +22,8 @@ namespace WindowsFormsApp1
             SetError = setError;
             chart1.Series[0].LegendText = "Y by X";
             chart1.Series[0].Points.DataBind(Values, "X", "Y", "");
+            chart1.Series[0].YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Double;
+            chart1.Series[0].XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Double;
             chart1.Visible = false;
         }
 
@@ -38,8 +40,8 @@ namespace WindowsFormsApp1
                        
                         Values.Clear();
                         var calc = new InfixCalculator.InfixCalculator(infixExpr);
-                        var start = -Math.PI;
-                        var end = Math.PI;
+                        var start = -Math.PI * 3;
+                        var end = Math.PI * 3;
                         var stepAmount = 75;
                         var step = (end - start) / stepAmount;
                         while (start <= end)
